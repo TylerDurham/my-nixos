@@ -1,6 +1,6 @@
 {
 	description = "Hyprland on NixOS";
-	
+
 	inputs = {
 		nixpkgs.url = "nixpkgs/nixos-unstable";
 		home-manager = {
@@ -9,14 +9,17 @@
 		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... }: {
-		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-            # nixpkgs.config.allowFreePredicate = (pkg: true);
-            specialArgs = { inherit nixpkgs; };
+	outputs = { self, nixpkgs, home-manager, ... }@inputs:
+	let
+    inherit (nixpkgs) lib;
+    hostname = import ./hostname.nix;
+
+		mkHost = hostname: cfg: nixpkgs.lib.nixosSystem {
+			system = cfg.system;
+			specialArgs = { inherit inputs nixpkgs hostname; };
 			modules = [
 				./configuration.nix
-				home-manager.nixosModules.home-manager 
+				home-manager.nixosModules.home-manager
 				{
 					home-manager = {
 						useGlobalPkgs = true;
@@ -25,7 +28,9 @@
 						backupFileExtension = "backup";
 					};
 				}
-			];	
-		};	
+			];
+		};
+	in {
+    nixosConfigurations = lib.mapAttrs mkHost (import ./hosts.nix);
 	};
 }
