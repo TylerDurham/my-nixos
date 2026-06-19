@@ -3,7 +3,7 @@
 {
   xdg.userDirs = {
     enable = true;
-    createDirectories = true;   # actually mkdir the folders
+    createDirectories = true;
     desktop     = "${config.home.homeDirectory}/Desktop";
     documents   = "${config.home.homeDirectory}/Documents";
     download    = "${config.home.homeDirectory}/Downloads";
