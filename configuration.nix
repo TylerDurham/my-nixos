@@ -1,4 +1,5 @@
 {
+  hostname,
   config,
   lib,
   pkgs,
@@ -15,13 +16,18 @@
     ./nixos/users.nix
   ];
 
+  console = {
+    font = "ter-132n";
+    packages = [ pkgs.terminus_font ];
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   services.getty.autologinUser = "dtd";
 
-  networking.hostName = "nixos";
+  networking.hostName = hostname;
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Chicago";
