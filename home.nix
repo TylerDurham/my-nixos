@@ -2,10 +2,10 @@
 
 {
   imports = [
-      ./home/gtk.nix
       ./home/git.nix
       ./home/desktop.nix
       ./home/zsh.nix
+      ./home/gtk.nix
   ];
 
 	home.username = "dtd";
@@ -26,5 +26,4 @@
             rebuild-nix = "sudo nixos-rebuild switch --flake $HOME/Projects/my-nixos#nixos";
 		};
 	};
-
 }

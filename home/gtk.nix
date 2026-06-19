@@ -1,10 +1,10 @@
 { pkgs, ... }:
 let
   graphite = pkgs.graphite-gtk-theme.override {
-    themeVariants = [ "default" ];          # default|purple|pink|red|orange|yellow|green|teal|blue|all (default: grey)
+    themeVariants = [ "orange" ];       # default|purple|pink|red|orange|yellow|green|teal|blue|all (default: grey)
     colorVariants = [ "dark" ];          # standard|light|dark
     sizeVariants  = [ "standard" ];      # standard|compact
-    tweaks        = [ "rimless" ];       # nord|black|darker|rimless|normal|colorful
+    tweaks        = [ "rimless" "black" "normal" ];       # nord|black|darker|rimless|normal|colorful
   };
 in
 {

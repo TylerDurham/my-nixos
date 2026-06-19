@@ -64,6 +64,7 @@
     hyprlauncher
     kitty
     lsd
+    nautilus
     neovim
     nwg-look
     ripgrep
