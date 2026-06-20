@@ -1,8 +1,18 @@
-# my-nixos
+```
+███╗   ███╗██╗   ██╗    ███╗   ██╗██╗██╗  ██╗ ██████╗ ███████╗
+████╗ ████║╚██╗ ██╔╝    ████╗  ██║██║╚██╗██╔╝██╔═══██╗██╔════╝
+██╔████╔██║ ╚████╔╝     ██╔██╗ ██║██║ ╚███╔╝ ██║   ██║███████╗
+██║╚██╔╝██║  ╚██╔╝      ██║╚██╗██║██║ ██╔██╗ ██║   ██║╚════██║
+██║ ╚═╝ ██║   ██║       ██║ ╚████║██║██╔╝ ██╗╚██████╔╝███████║
+╚═╝     ╚═╝   ╚═╝       ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+```                                                           
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/dev/media/nixos.png" width="200"/></p>
+  <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
+</div>
 
-<img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/dev/media/nixos.png" width="250"/>
 
-Personal NixOS configuration with Hyprland, managed via flakes and Home Manager.
+
 
 ## Hosts
 
