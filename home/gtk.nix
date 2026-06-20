@@ -11,7 +11,7 @@ in
   gtk = {
     enable = true;
     theme = {
-      name = "Graphite-Dark";       # must match the built dir name — see note below
+      name = "Graphite-orange-Dark";       # must match the built dir name — see note below
       package = graphite;
     };
     iconTheme = {                          # add this block
