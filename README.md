@@ -11,9 +11,6 @@
   <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
 </div>
 
-
-
-
 ## Hosts
 
 | Name | Arch | Notes |
@@ -21,6 +18,15 @@
 | `erebor` | x86_64 | Laptop, LUKS-encrypted root |
 | `imladris` | x86_64 | Laptop |
 | `nixvm` | x86_64 | VM |
+
+## Optional Dependancies
+
+| Name                                                      | Description             |
+|-----------------------------------------------------------|-------------------------|
+| [my-shell](https://github.com/TylerDurham/my-shell)       | My `shell` dotfiles.    |
+| [my-hyprland](https://github.com/TylerDurham/my-hyprland) | My `Hyprland` dotfiles. |
+| [my-neovim](https://github.com/TylerDurham/my-neovim)     | My `NeoVim` dotfiles.   |
+
 
 ## Structure
 
@@ -64,7 +70,7 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 **IMPORTANT:** I don't use a display manager like `sddm`. This hardware setup assumes your main disk is encrypted. While you 
 can certainly modify, unless you encrypt your disk and/or use a display manager, using this configuration leaves you vulnerable. 
 
-Basic `LUKS` encryption setup:
+Basic `LUKS` encryption setup (Assuming `UEFI` boot, swap, and OS partitions on a modern `NVME` drive):
 
 ``` shell
 cryptsetup luksFormat /dev/nvme0n1p3
