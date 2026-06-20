@@ -3,6 +3,7 @@
 {
   imports = [
     ./home/git.nix
+    ./home/bash.nix
     ./home/development.nix
     ./home/packages.nix
     ./home/xdg.nix
