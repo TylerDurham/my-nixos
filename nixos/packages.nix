@@ -9,6 +9,9 @@
     bat
     curl
     fzf
+    hypridle
+    hyprsunset
+    hyprlock
     jq
     lsd
     nerd-fonts.jetbrains-mono
