@@ -57,6 +57,22 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## Usage
 
+### Install
+
+#### Disk Preparation
+
+**IMPORTANT:** I don't use a display manager like `sddm`. This hardware setup assumes your main disk is encrypted. While you 
+can certainly modify, unless you encrypt your disk and/or use a display manager, using this configuration leaves you vulnerable. 
+
+Basic `LUKS` encryption setup:
+
+``` shell
+cryptsetup luksFormat /dev/nvme0n1p3
+cryptsetup luksOpen /dev/nvme0n1p3 cryptroot
+mkfs.ext4 /dev/mapper/cryptroot
+
+```
+
 ### Rebuild
 
 ```bash
