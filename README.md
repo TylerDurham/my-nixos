@@ -7,7 +7,7 @@
 ╚═╝     ╚═╝   ╚═╝       ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
 ```                                                           
 <div align="center">
-  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/dev/media/nixos.png" width="200"/></p>
+  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/master/media/nixos.png" width="200"/></p>
   <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
 </div>
 
@@ -49,17 +49,17 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## System Packages
 
-`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `power-profiles-daemon` `ripgrep` `stow` `tmux` `vim` `wget` `zoxide`
+`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `ripgrep` `stow` `tmux` `vim` `wget` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
 ## Home Packages
 
-**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol` `playerctl`
+**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol`
 
-**Desktop:** `brightnessctl` `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `rofi` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
+**Desktop:** `ghostty` `kitty` `nautilus` `rofi` `waybar` `swww` `swaynotificationcenter` `swayosd` `nwg-look`
 
-**Dev:** `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `starship` `wl-clipboard`
+**Dev:** `neovim` `starship` `wl-clipboard` `hyprlauncher` `hyprshutdown`
 
 ## Usage
 
