@@ -13,6 +13,7 @@
     plexamp
     plex-desktop
     rofi
+    signal-desktop
     spotify
     starship
     swaynotificationcenter
