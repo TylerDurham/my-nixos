@@ -9,12 +9,12 @@
 {
   imports = [
     ./hosts/${hostname}/hardware-configuration.nix
-    ./nixos/audio.nix
-    ./nixos/hyprland.nix
-    ./nixos/packages.nix
-    ./nixos/programs.nix
-    ./nixos/plymouth.nix
-    ./nixos/users.nix
+    ./system/audio.nix
+    ./system/hyprland.nix
+    ./system/packages.nix
+    ./system/programs.nix
+    ./system/plymouth.nix
+    ./system/users.nix
   ];
 
   console = {

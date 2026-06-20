@@ -15,6 +15,7 @@
     jq
     lsd
     nerd-fonts.jetbrains-mono
+    power-profiles-daemon
     ripgrep
     stow
     tmux
