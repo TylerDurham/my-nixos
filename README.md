@@ -35,6 +35,14 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 **Font:** JetBrains Mono Nerd Font
 
+## Home Packages
+
+**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol`
+
+**Desktop:** `ghostty` `kitty` `nautilus` `rofi` `waybar` `swww` `swaynotificationcenter` `swayosd` `nwg-look`
+
+**Dev:** `neovim` `starship` `wl-clipboard` `hyprlauncher` `hyprshutdown`
+
 ## Usage
 
 ```bash
