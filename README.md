@@ -1,6 +1,15 @@
-# my-nixos
-
-Personal NixOS configuration with Hyprland, managed via flakes and Home Manager.
+```
+███╗   ███╗██╗   ██╗    ███╗   ██╗██╗██╗  ██╗ ██████╗ ███████╗
+████╗ ████║╚██╗ ██╔╝    ████╗  ██║██║╚██╗██╔╝██╔═══██╗██╔════╝
+██╔████╔██║ ╚████╔╝     ██╔██╗ ██║██║ ╚███╔╝ ██║   ██║███████╗
+██║╚██╔╝██║  ╚██╔╝      ██║╚██╗██║██║ ██╔██╗ ██║   ██║╚════██║
+██║ ╚═╝ ██║   ██║       ██║ ╚████║██║██╔╝ ██╗╚██████╔╝███████║
+╚═╝     ╚═╝   ╚═╝       ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+```                                                           
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/dev/media/nixos.png" width="200"/></p>
+  <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
+</div>
 
 ## Hosts
 
@@ -9,6 +18,15 @@ Personal NixOS configuration with Hyprland, managed via flakes and Home Manager.
 | `erebor` | x86_64 | Laptop, LUKS-encrypted root |
 | `imladris` | x86_64 | Laptop |
 | `nixvm` | x86_64 | VM |
+
+## Optional Dependancies
+
+| Name                                                      | Description             |
+|-----------------------------------------------------------|-------------------------|
+| [my-shell](https://github.com/TylerDurham/my-shell)       | My `shell` dotfiles.    |
+| [my-hyprland](https://github.com/TylerDurham/my-hyprland) | My `Hyprland` dotfiles. |
+| [my-neovim](https://github.com/TylerDurham/my-neovim)     | My `NeoVim` dotfiles.   |
+
 
 ## Structure
 
@@ -45,9 +63,40 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## Usage
 
+### Install
+
+#### Disk Preparation
+
+**IMPORTANT:** I don't use a display manager like `sddm`. This hardware setup assumes your main disk is encrypted. While you 
+can certainly modify, unless you encrypt your disk and/or use a display manager, using this configuration leaves you vulnerable. 
+
+Basic `LUKS` encryption setup (Assuming `UEFI` boot, swap, and OS partitions on a modern `NVME` drive):
+
+``` shell
+cryptsetup luksFormat /dev/nvme0n1p3
+cryptsetup luksOpen /dev/nvme0n1p3 cryptroot
+mkfs.ext4 /dev/mapper/cryptroot
+
+```
+
+### Rebuild
+
 ```bash
 # Build and switch (replace <host> with erebor, imladris, or nixvm)
 sudo nixos-rebuild switch --flake .#<host>
+```
+There are two utility aliases for bash and zsh that will rebuild and garbage collect, respectively. 
+The hostname is determined in the alias, so you don't need to specify the host name.
+
+**Rebuild**
+
+``` shell
+nix-rb
+```
+**Garbage Collect**
+
+``` shell
+nix-gc
 ```
 
 ## License
