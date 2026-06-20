@@ -49,3 +49,7 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 # Build and switch (replace <host> with erebor, imladris, or nixvm)
 sudo nixos-rebuild switch --flake .#<host>
 ```
+
+## License
+
+[MIT](LICENSE)
