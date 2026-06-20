@@ -8,7 +8,7 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
+    ./hosts/${hostname}/hardware-configuration.nix
     ./nixos/audio.nix
     ./nixos/hyprland.nix
     ./nixos/packages.nix
@@ -26,6 +26,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   services.getty.autologinUser = "dtd";
+  services.sshd.enable = true;
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
