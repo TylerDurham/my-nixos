@@ -49,17 +49,17 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## System Packages
 
-`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `ripgrep` `stow` `tmux` `vim` `wget` `zoxide`
+`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `power-profiles-daemon` `ripgrep` `stow` `tmux` `vim` `wget` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
 ## Home Packages
 
-**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol`
+**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol` `playerctl`
 
-**Desktop:** `ghostty` `kitty` `nautilus` `rofi` `waybar` `swww` `swaynotificationcenter` `swayosd` `nwg-look`
+**Desktop:** `brightnessctl` `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `rofi` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
 
-**Dev:** `neovim` `starship` `wl-clipboard` `hyprlauncher` `hyprshutdown`
+**Dev:** `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `starship` `wl-clipboard`
 
 ## Usage
 
