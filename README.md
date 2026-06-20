@@ -1,5 +1,7 @@
 # my-nixos
 
+<img src="https://github.com/TylerDurham/my-nixos/blob/master/media/nixos.png?raw=true"/>
+
 Personal NixOS configuration with Hyprland, managed via flakes and Home Manager.
 
 ## Hosts
@@ -45,9 +47,24 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## Usage
 
+### Rebuild
+
 ```bash
 # Build and switch (replace <host> with erebor, imladris, or nixvm)
 sudo nixos-rebuild switch --flake .#<host>
+```
+There are two utility aliases for bash and zsh that will rebuild and garbage collect, respectively. 
+The hostname is determined in the alias, so you don't need to specify the host name.
+
+**Rebuild**
+
+``` shell
+nix-rb
+```
+**Garbage Collect**
+
+``` shell
+nix-gc
 ```
 
 ## License
