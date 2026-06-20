@@ -13,6 +13,7 @@
     ./nixos/hyprland.nix
     ./nixos/packages.nix
     ./nixos/programs.nix
+    ./nixos/plymouth.nix
     ./nixos/users.nix
   ];
 
@@ -24,6 +25,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  modules.plymouth = {
+    enable = true;
+    preset = "lone";   # -> theme = "lone", extraConfig = "ShowDelay=0"
+  };
 
   services.getty.autologinUser = "dtd";
   services.sshd.enable = true;

@@ -20,5 +20,6 @@
     tmux
     vim
     wget
+    zoxide
   ];
 }
