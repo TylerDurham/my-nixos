@@ -26,10 +26,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.firewall = {
-    allowedTCPPorts = [ 17500 ];
-    allowedUDPPorts = [ 17500 ];
-  };
+  # networking.firewall = {
+  #   allowedTCPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
+  #   allowedUDPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
+  # };
 
   # systemd.user.services.dropbox = {
   #   description = "Dropbox";
