@@ -19,6 +19,7 @@
     plex-desktop
     plexamp
     rofi
+    rustdesk
     signal-desktop
     spotify
     starship
