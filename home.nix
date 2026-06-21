@@ -6,6 +6,7 @@
     ./home/bash.nix
     ./home/development.nix
     ./home/packages.nix
+    ./home/dropbox.nix
     ./home/xdg.nix
     ./home/zsh.nix
     ./home/gtk.nix
