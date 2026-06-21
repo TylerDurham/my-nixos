@@ -49,7 +49,7 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## System Packages
 
-`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `power-profiles-daemon` `ripgrep` `stow` `tmux` `vim` `wget` `zoxide`
+`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `power-profiles-daemon` `ripgrep` `stow` `tmux` `vim` `wget` `xdg-terminal-exec` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
@@ -57,7 +57,7 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 **Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol` `playerctl`
 
-**Desktop:** `brightnessctl` `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `rofi` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
+**Desktop:** `brightnessctl` `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `rofi` `rustdesk` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
 
 **Dev:** `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `starship` `wl-clipboard`
 
