@@ -21,6 +21,7 @@
     tmux
     vim
     wget
+    xdg-terminal-exec
     zoxide
   ];
 }
