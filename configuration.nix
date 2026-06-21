@@ -33,7 +33,7 @@
 
   services.getty.autologinUser = "dtd";
   services.sshd.enable = true;
-
+  services.power-profiles-daemon.enable = true;
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
 
