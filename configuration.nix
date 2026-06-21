@@ -26,6 +26,31 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # networking.firewall = {
+  #   allowedTCPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
+  #   allowedUDPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
+  # };
+
+  # systemd.user.services.dropbox = {
+  #   description = "Dropbox";
+  #   after = [ "xembedsniproxy.service" ];
+  #   wants = [ "xembedsniproxy.service" ];
+  #   wantedBy = [ "graphical-session.target" ];
+  #   environment = {
+  #     QT_PLUGIN_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtPluginPrefix;
+  #     QML2_IMPORT_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtQmlPrefix;
+  #   };
+  #   serviceConfig = {
+  #     ExecStart = "${pkgs.dropbox.out}/bin/dropbox";
+  #     ExecReload = "${pkgs.coreutils.out}/bin/kill -HUP $MAINPID";
+  #     KillMode = "control-group"; # upstream recommends process
+  #     Restart = "on-failure";
+  #     PrivateTmp = true;
+  #     ProtectSystem = "full";
+  #     Nice = 10;
+  #   };
+  # };
+
   modules.plymouth = {
     enable = true;
     preset = "lone";   # -> theme = "lone", extraConfig = "ShowDelay=0"

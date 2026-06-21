@@ -8,6 +8,7 @@
     hyprshutdown
     inotify-tools
     kitty
+    libappindicator-gtk3
     libnotify
     libsecret
     nautilus
@@ -27,4 +28,5 @@
     waybar
     wl-clipboard
   ];
+  
 }
