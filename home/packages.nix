@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     brightnessctl
     ghostty
+    grimblast
     hyprlauncher
     hyprshutdown
     inotify-tools
@@ -14,7 +15,9 @@
     nautilus
     neovim
     nwg-look
+    obsidian
     pavucontrol
+    pinta
     playerctl
     plex-desktop
     plexamp
