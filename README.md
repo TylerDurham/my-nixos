@@ -55,11 +55,11 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## Home Packages
 
-**Media:** `plexamp` `plex-desktop` `spotify` `pavucontrol` `playerctl`
+**Media:** `plexamp` `plex-desktop` `spotify` 
 
-**Desktop:** `brightnessctl` `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `rofi` `rustdesk` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
+**Desktop:** `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `obsidian` `pinta` `rofi` `rustdesk` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
 
-**Dev:** `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `starship` `wl-clipboard`
+**Utility:** `brightnessctl` `grimblast` `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `pavucontrol` `playerctl` `starship` `wl-clipboard`
 
 ## Usage
 
