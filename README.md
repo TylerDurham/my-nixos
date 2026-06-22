@@ -55,7 +55,7 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 
 ## Home Packages
 
-**Media:** `plexamp` `plex-desktop` `spotify` 
+**Media:** `handbrake` `makemkv` `plexamp` `plex-desktop` `spotify` `vlc`
 
 **Desktop:** `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `obsidian` `pinta` `rofi` `rustdesk` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
 
