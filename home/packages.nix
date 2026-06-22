@@ -5,6 +5,7 @@
     brightnessctl
     ghostty
     grimblast
+    # handbrake
     hyprlauncher
     hyprshutdown
     inotify-tools
@@ -12,6 +13,7 @@
     libappindicator-gtk3
     libnotify
     libsecret
+    # makemkv
     nautilus
     neovim
     nwg-look
@@ -29,6 +31,7 @@
     swaynotificationcenter
     swayosd
     swww
+    vlc
     waybar
     wl-clipboard
   ];
