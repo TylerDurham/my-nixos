@@ -14,6 +14,7 @@
     ./system/packages.nix
     ./system/programs.nix
     ./system/plymouth.nix
+    ./system/services/sshd.nix
     ./system/users.nix
   ];
 
@@ -25,6 +26,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
 
   # networking.firewall = {
   #   allowedTCPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
@@ -56,8 +58,14 @@
     preset = "lone";   # -> theme = "lone", extraConfig = "ShowDelay=0"
   };
 
+  # Filesystek/networking
+  services.gvfs.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+  };
+
   services.getty.autologinUser = "dtd";
-  services.sshd.enable = true;
   services.power-profiles-daemon.enable = true;
   networking.hostName = hostname;
   networking.networkmanager.enable = true;

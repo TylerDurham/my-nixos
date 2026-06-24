@@ -9,9 +9,12 @@
     bat
     curl
     fzf
+    gnome-keyring
+    gvfs
     hypridle
     hyprsunset
     hyprlock
+    imagemagick
     jq
     lsd
     nerd-fonts.jetbrains-mono
