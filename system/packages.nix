@@ -9,6 +9,8 @@
     bat
     curl
     fzf
+    gnome-keyring
+    gvfs
     hypridle
     hyprsunset
     hyprlock

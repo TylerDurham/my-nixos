@@ -26,6 +26,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+
   # networking.firewall = {
   #   allowedTCPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
   #   allowedUDPPorts = [ 17500 ];  # Dropbox LAN sync (optional)
@@ -54,6 +55,13 @@
   modules.plymouth = {
     enable = true;
     preset = "lone";   # -> theme = "lone", extraConfig = "ShowDelay=0"
+  };
+
+  # Filesystek/networking
+  services.gvfs.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
   };
 
   services.getty.autologinUser = "dtd";
