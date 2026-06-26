@@ -15,6 +15,7 @@
     hyprsunset
     hyprlock
     imagemagick
+    matugen
     jq
     lsd
     nerd-fonts.jetbrains-mono
