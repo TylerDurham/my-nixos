@@ -5,7 +5,7 @@
     ./home/git.nix
     ./home/bash.nix
     ./home/development.nix
-    ./home/packages.nix
+    ./home/packages
     ./home/dropbox.nix
     ./home/xdg.nix
     ./home/zsh.nix
