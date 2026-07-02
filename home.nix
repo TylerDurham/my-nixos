@@ -7,6 +7,7 @@
     ./home/development.nix
     ./home/packages
     ./home/dropbox.nix
+    ./home/packages/devices.nix
     ./home/xdg.nix
     ./home/zsh.nix
     ./home/gtk.nix

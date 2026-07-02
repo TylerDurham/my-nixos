@@ -11,6 +11,7 @@
     fzf
     gnome-keyring
     gvfs
+    gzip
     hypridle
     hyprsunset
     hyprlock
@@ -27,5 +28,6 @@
     wget
     xdg-terminal-exec
     zoxide
+    unzip
   ];
 }
