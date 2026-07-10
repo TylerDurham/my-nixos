@@ -16,6 +16,9 @@
   home.username = "dtd";
   home.homeDirectory = "/home/dtd";
   home.stateVersion = "26.05";
+  home.sessionVariables = rec {
+    EDITOR = "nvim";
+  };
 
   services.hyprpolkitagent.enable = true;
 
