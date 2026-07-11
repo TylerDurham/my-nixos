@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -19,6 +19,14 @@ in
       enable = true;
       xwayland.enable = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      hypridle
+      hyprsunset
+      hyprlock
+      hyprlauncher
+      hyprshutdown
+    ];
   };
 
 }

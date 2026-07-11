@@ -12,14 +12,10 @@
     gnome-keyring
     gvfs
     gzip
-    hypridle
-    hyprsunset
-    hyprlock
     imagemagick
     matugen
     jq
     lsd
-    nerd-fonts.jetbrains-mono
     power-profiles-daemon
     go
     nixd
@@ -32,7 +28,6 @@
     tmux
     vim
     wget
-    xdg-terminal-exec
     zoxide
     unzip
   ];

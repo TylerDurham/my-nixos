@@ -20,7 +20,7 @@
 			modules = [
 				./configuration.nix
 				{ modules = cfg.modules or {}; }
-				./modules/optional/desktop.nix
+				./modules/desktop/default.nix
 				./modules/optional/docker.nix
 				./modules/optional/mise.nix
 				home-manager.nixosModules.home-manager

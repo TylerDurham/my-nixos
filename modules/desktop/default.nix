@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -7,8 +7,9 @@ let
 in
 {
   imports = [
-    ./audio.nix
-    ./bluetooth.nix
+    ../system/audio.nix
+    ../system/bluetooth.nix
+    ../system/plymouth.nix
     ./hyprland.nix
   ];
 
@@ -20,6 +21,17 @@ in
     modules.hyprland.enable = true;
     modules.bluetooth.enable = true;
     modules.audio.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      inotify-tools
+      nautilus
+      nerd-fonts.jetbrains-mono
+      nwg-look
+      obsidian
+      signal-desktop
+      xdg-terminal-exec
+    ];
   };
+
 }
 
