@@ -21,6 +21,7 @@
 				./configuration.nix
 				{ modules = cfg.modules or {}; }
 				./modules/optional/audio.nix
+				./modules/optional/bluetooth.nix
 				./modules/optional/docker.nix
 				./modules/optional/hyprland.nix
 				./modules/optional/mise.nix

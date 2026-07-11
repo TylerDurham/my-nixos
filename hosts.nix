@@ -9,5 +9,6 @@
     modules.docker.enable = true; 
     modules.hyprland.enable = true;
     modules.mise.enable = true;
+    modules.bluetooth.enable = true;
   };
 }
