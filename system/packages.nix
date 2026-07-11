@@ -22,8 +22,11 @@
     nerd-fonts.jetbrains-mono
     power-profiles-daemon
     go
+    nixd
+    nixfmt-rfc-style
     nodejs
     python3
+    tree-sitter
     ripgrep
     stow
     tmux
