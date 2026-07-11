@@ -7,7 +7,7 @@
 ╚═╝     ╚═╝   ╚═╝       ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
 ```                                                           
 <div align="center">
-  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/master/media/nixos.png" width="200"/></p>
+  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/master/nixos.png" width="200"/></p>
   <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
 </div>
 
