@@ -7,6 +7,7 @@
     ./home/development.nix
     ./home/packages
     ./home/dropbox.nix
+    ./home/packages/devices.nix
     ./home/xdg.nix
     ./home/zsh.nix
     ./home/gtk.nix
@@ -15,6 +16,9 @@
   home.username = "dtd";
   home.homeDirectory = "/home/dtd";
   home.stateVersion = "26.05";
+  home.sessionVariables = rec {
+    EDITOR = "nvim";
+  };
 
   services.hyprpolkitagent.enable = true;
 

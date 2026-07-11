@@ -11,6 +11,7 @@
     fzf
     gnome-keyring
     gvfs
+    gzip
     hypridle
     hyprsunset
     hyprlock
@@ -20,6 +21,9 @@
     lsd
     nerd-fonts.jetbrains-mono
     power-profiles-daemon
+    go
+    nodejs
+    python3
     ripgrep
     stow
     tmux
@@ -27,5 +31,6 @@
     wget
     xdg-terminal-exec
     zoxide
+    unzip
   ];
 }

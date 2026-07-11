@@ -7,6 +7,7 @@ in
   programs.zsh = {
     enable = true;
     initContent = ''
+      export EDITOR=nvim
       source "$HOME/.local/share/my/shell/zsh.rc.sh"
     '';
     shellAliases = {

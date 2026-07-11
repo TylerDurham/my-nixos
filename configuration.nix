@@ -9,8 +9,7 @@
 {
   imports = [
     ./hosts/${hostname}/hardware-configuration.nix
-    ./system/audio.nix
-    ./system/hyprland.nix
+    #./system/hyprland.nix
     ./system/packages.nix
     ./system/programs.nix
     ./system/plymouth.nix

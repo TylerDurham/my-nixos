@@ -22,7 +22,7 @@
     obsidian
     pavucontrol
     rofi
-    rustdesk
+    # rustdesk
     signal-desktop
     starship
     swaynotificationcenter
@@ -30,5 +30,6 @@
     swww
     waybar
     wl-clipboard
+    yazi
   ];
 }
