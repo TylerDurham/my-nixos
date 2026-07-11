@@ -21,6 +21,9 @@
     lsd
     nerd-fonts.jetbrains-mono
     power-profiles-daemon
+    go
+    nodejs
+    python3
     ripgrep
     stow
     tmux
