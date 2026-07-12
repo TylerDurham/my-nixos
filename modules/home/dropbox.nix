@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
+  # ISSUE: Nautilus dropbox extension not working!
   nautilusExtDir = "${pkgs.dropbox-cli.nautilusExtension}/lib/nautilus/extension-4";
 in
 {
