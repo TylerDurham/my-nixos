@@ -9,8 +9,6 @@
 {
   imports = [
     ./hardware/${hostname}/hardware-configuration.nix
-    #./system/hyprland.nix
-    ./system/packages.nix
     ./modules/system/programs.nix
     ./modules/system/users.nix
   ];
