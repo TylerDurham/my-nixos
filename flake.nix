@@ -20,14 +20,14 @@
 			modules = [
 				./configuration.nix
 				{ modules = cfg.modules or {}; }
-				./modules/desktop/_desktop.nix
+				./modules/desktop.nix
 				./modules/system/development.nix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.dtd = import ./modules/home/_home.nix;
+						users.dtd = import ./modules/home.nix;
 						backupFileExtension = "backup";
 					};
 				}

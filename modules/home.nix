@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ./git.nix
-    ./dropbox.nix
-    ./development.nix
-    ./xdg.nix
-    ./gtk.nix
-    ./shell.nix
+    ./home/git.nix
+    ./home/dropbox.nix
+    ./home/development.nix
+    ./home/xdg.nix
+    ./home/gtk.nix
+    ./home/shell.nix
   ];
 
   home.username = "dtd";

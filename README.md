@@ -35,7 +35,8 @@ flake.nix              # Entrypoint — nixpkgs-unstable + home-manager
 configuration.nix      # Shared NixOS config imported by all hosts
 hosts.nix              # Per-host module toggles and settings
 hardware/              # Per-host hardware configurations
-modules/desktop/       # Desktop environment modules (Hyprland, audio, bluetooth)
+modules/desktop.nix    # Desktop environment module (Hyprland, audio, bluetooth)
+modules/home.nix       # Home Manager entry point
 modules/home/          # Home Manager modules (shell, git, gtk, development)
 modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
 system/                # Core NixOS config (packages, programs, users)
@@ -52,7 +53,7 @@ system/                # Core NixOS config (packages, programs, users)
 
 ## System Packages
 
-`bat` `curl` `fzf` `go` `gnome-keyring` `gvfs` `gzip` `imagemagick` `jq` `lsd` `matugen` `nixd` `nixfmt-rfc-style` `nodejs` `power-profiles-daemon` `python3` `ripgrep` `stow` `tmux` `tree-sitter` `unzip` `vim` `wget` `zoxide`
+`bat` `btop` `curl` `fzf` `gvfs` `gzip` `jq` `lsd` `neovim` `ripgrep` `starship` `stow` `tmux` `tree` `unzip` `vim` `wget` `yazi` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
@@ -64,7 +65,7 @@ system/                # Core NixOS config (packages, programs, users)
 
 **Utility:** `brightnessctl` `grimblast` `libsecret` `neovim` `pavucontrol` `starship` `wl-clipboard`
 
-**Development** *(host-level toggle via `modules.development.enable`)*: `bun` `gcc` `github-cli` `gnumake` `go` `just` `nodejs` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
+**Development** *(host-level toggle via `modules.development.enable`)*: `black` `bun` `gcc` `github-cli` `gnumake` `go` `gopls` `gotools` `isort` `just` `nixd` `nodejs` `prettier` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
 
 ## Usage
 

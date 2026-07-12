@@ -7,7 +7,7 @@
     fzf
     gvfs
     lsd
-    neovim
+    neovim                    # extensible terminal text editor
     ripgrep
     stow
     tmux

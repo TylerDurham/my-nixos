@@ -26,7 +26,8 @@ in
       hyprlock               # GPU-accelerated screen locker for Hyprland
       hyprlauncher           # app launcher built for Hyprland
       hyprshutdown           # power menu / shutdown dialog for Hyprland
-      waybar                 # highly customizable Wayland status bar
+      waybar                    # highly customizable Wayland status bar
+      swww                      # Wayland wallpaper daemon with transitions
       rofi                   # application launcher and window switcher
     ];
   };
