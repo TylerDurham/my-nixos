@@ -33,11 +33,12 @@
 ```
 flake.nix              # Entrypoint — nixpkgs-unstable + home-manager
 configuration.nix      # Shared NixOS config imported by all hosts
+hosts.nix              # Per-host module toggles and settings
 hardware/              # Per-host hardware configurations
-modules/               # Optional NixOS modules (desktop, system submodules)
+modules/desktop/       # Desktop environment modules (Hyprland, audio, bluetooth)
+modules/home/          # Home Manager modules (shell, git, gtk, development)
+modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
 system/                # Core NixOS config (packages, programs, users)
-home.nix               # Home Manager entrypoint
-home/                  # User-level config (zsh, git, gtk, xdg, packages, dev tools)
 ```
 
 ## Features
@@ -62,6 +63,8 @@ home/                  # User-level config (zsh, git, gtk, xdg, packages, dev to
 **Desktop:** `ghostty` `kitty` `libnotify` `rofi` `swaynotificationcenter` `swayosd` `swww` `waybar` `yazi`
 
 **Utility:** `brightnessctl` `grimblast` `libsecret` `neovim` `pavucontrol` `starship` `wl-clipboard`
+
+**Development** *(host-level toggle via `modules.development.enable`)*: `bun` `gcc` `github-cli` `gnumake` `go` `just` `nodejs` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
 
 ## Usage
 
@@ -90,11 +93,24 @@ sudo nixos-rebuild switch --flake .#<host>
 There are two utility aliases for bash and zsh that will rebuild and garbage collect, respectively. 
 The hostname is determined in the alias, so you don't need to specify the host name.
 
-**Rebuild**
+**Rebuild and switch**
 
 ``` shell
-nix-rb
+nix-rbs
 ```
+
+**Build only (no activation)**
+
+``` shell
+nix-rbb
+```
+
+**Test (activate, no persistence across reboot)**
+
+``` shell
+nix-rbt
+```
+
 **Garbage Collect**
 
 ``` shell
