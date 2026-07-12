@@ -35,6 +35,9 @@ in
     Service = {
       ExecStart = "${pkgs.dropbox}/bin/dropbox";
       Restart = "on-failure";
+      # Override Dropbox's bundled Firefox by pointing BROWSER at xdg-open.
+      # Use the full store path — the bwrap sandbox has its own /usr but mounts /nix.
+      Environment = [ "BROWSER=${pkgs.xdg-utils}/bin/xdg-open" ];
     };
   };
 }
