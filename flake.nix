@@ -13,10 +13,11 @@
 	let
     inherit (nixpkgs) lib;
     hostname = import ./hostname.nix;
+    username = "dtd";
 
 		mkHost = hostname: cfg: nixpkgs.lib.nixosSystem {
 			system = cfg.system;
-			specialArgs = { inherit inputs nixpkgs hostname; };
+			specialArgs = { inherit inputs nixpkgs hostname username; };
 			modules = [
 				./configuration.nix
 				{ modules = cfg.modules or {}; }
@@ -27,7 +28,8 @@
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.dtd = import ./modules/home.nix;
+						users.${username} = import ./modules/home.nix;
+						extraSpecialArgs = { inherit username; };
 						backupFileExtension = "backup";
 					};
 				}

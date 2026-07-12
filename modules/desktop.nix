@@ -31,6 +31,11 @@ in
     modules.bluetooth.enable = true;
     modules.audio.enable = true;
 
+    fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+    ];
+
+
     environment.systemPackages = with pkgs; [
       brightnessctl             # screen and keyboard brightness control
       gnome-keyring

@@ -9,10 +9,8 @@
 {
   imports = [
     ./hardware/${hostname}/hardware-configuration.nix
-    #./system/hyprland.nix
-    ./system/packages.nix
-    ./system/programs.nix
-    ./system/users.nix
+    ./modules/system/programs.nix
+    ./modules/system/users.nix
   ];
 
   console = {
