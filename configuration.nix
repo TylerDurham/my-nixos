@@ -11,7 +11,7 @@
     ./hardware/${hostname}/hardware-configuration.nix
     #./system/hyprland.nix
     ./system/packages.nix
-    ./system/programs.nix
+    ./modules/system/programs.nix
     ./modules/system/users.nix
   ];
 
