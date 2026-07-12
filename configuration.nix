@@ -12,7 +12,7 @@
     #./system/hyprland.nix
     ./system/packages.nix
     ./system/programs.nix
-    ./system/users.nix
+    ./modules/system/users.nix
   ];
 
   console = {
