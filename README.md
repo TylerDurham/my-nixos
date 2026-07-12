@@ -7,7 +7,7 @@
 ╚═╝     ╚═╝   ╚═╝       ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
 ```                                                           
 <div align="center">
-  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/master/media/nixos.png" width="200"/></p>
+  <p><img src="https://raw.githubusercontent.com/TylerDurham/my-nixos/refs/heads/master/nixos.png" width="200"/></p>
   <p>My personal NixOS configuration with Hyprland, managed via flakes and Home Manager.</p>
 </div>
 
@@ -33,10 +33,12 @@
 ```
 flake.nix              # Entrypoint — nixpkgs-unstable + home-manager
 configuration.nix      # Shared NixOS config imported by all hosts
-hosts/                 # Per-host hardware configurations
-system/                 # NixOS modules (audio, hyprland, packages, plymouth, programs, users)
-home.nix               # Home Manager entrypoint
-home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, dev tools)
+hosts.nix              # Per-host module toggles and settings
+hardware/              # Per-host hardware configurations
+modules/desktop/       # Desktop environment modules (Hyprland, audio, bluetooth)
+modules/home/          # Home Manager modules (shell, git, gtk, development)
+modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
+system/                # Core NixOS config (packages, programs, users)
 ```
 
 ## Features
@@ -44,22 +46,25 @@ home/                  # User-level config (bash, zsh, git, gtk, xdg, packages, 
 - **Hyprland** — Wayland compositor with XWayland support
 - **Plymouth** — Graphical boot splash (`lone` preset, silent boot, systemd initrd)
 - **Home Manager** — Declarative user environment (Neovim, Ghostty, Kitty, Waybar, Rofi, Starship, swww)
-- **Audio** — PipeWire via `system/audio.nix`
+- **Audio** — PipeWire via `modules/system/audio.nix`
+- **Bluetooth** — Optional via `modules/system/bluetooth.nix`
 - **1Password** — System-level GUI + CLI integration
 
 ## System Packages
 
-`bat` `curl` `fzf` `hypridle` `hyprlock` `hyprsunset` `jq` `lsd` `power-profiles-daemon` `ripgrep` `stow` `tmux` `vim` `wget` `xdg-terminal-exec` `zoxide`
+`bat` `curl` `fzf` `go` `gnome-keyring` `gvfs` `gzip` `imagemagick` `jq` `lsd` `matugen` `nixd` `nixfmt-rfc-style` `nodejs` `power-profiles-daemon` `python3` `ripgrep` `stow` `tmux` `tree-sitter` `unzip` `vim` `wget` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
 ## Home Packages
 
-**Media:** `handbrake` `makemkv` `plexamp` `plex-desktop` `spotify` `vlc`
+**Media:** `imv` `mpv` `pinta` `playerctl` `plex-desktop` `plexamp` `spotify` `vlc`
 
-**Desktop:** `ghostty` `kitty` `libnotify` `nautilus` `nwg-look` `obsidian` `pinta` `rofi` `rustdesk` `signal-desktop` `swaynotificationcenter` `swayosd` `swww` `waybar`
+**Desktop:** `ghostty` `kitty` `libnotify` `rofi` `swaynotificationcenter` `swayosd` `swww` `waybar` `yazi`
 
-**Utility:** `brightnessctl` `grimblast` `hyprlauncher` `hyprshutdown` `inotify-tools` `libsecret` `neovim` `pavucontrol` `playerctl` `starship` `wl-clipboard`
+**Utility:** `brightnessctl` `grimblast` `libsecret` `neovim` `pavucontrol` `starship` `wl-clipboard`
+
+**Development** *(host-level toggle via `modules.development.enable`)*: `bun` `gcc` `github-cli` `gnumake` `go` `just` `nodejs` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
 
 ## Usage
 
@@ -88,11 +93,24 @@ sudo nixos-rebuild switch --flake .#<host>
 There are two utility aliases for bash and zsh that will rebuild and garbage collect, respectively. 
 The hostname is determined in the alias, so you don't need to specify the host name.
 
-**Rebuild**
+**Rebuild and switch**
 
 ``` shell
-nix-rb
+nix-rbs
 ```
+
+**Build only (no activation)**
+
+``` shell
+nix-rbb
+```
+
+**Test (activate, no persistence across reboot)**
+
+``` shell
+nix-rbt
+```
+
 **Garbage Collect**
 
 ``` shell

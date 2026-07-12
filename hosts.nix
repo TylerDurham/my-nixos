@@ -11,6 +11,6 @@
     laptop = true;
     modules.desktop.enable = true;
     modules.docker.enable = true;
-    modules.mise.enable = true;
+    modules.development.enable = true;
   };
 }

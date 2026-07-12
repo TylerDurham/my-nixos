@@ -15,5 +15,8 @@ in
     home-manager.users.dtd.programs.zsh.initContent = ''
       eval "$(mise activate zsh)"
     '';
+    home-manager.users.dtd.programs.bash.initExtra = ''
+      eval "$(mise activate zsh)"
+    '';
   };
 }
