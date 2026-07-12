@@ -1,0 +1,66 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = config.modules.desktop;
+in
+{
+  imports = [
+    ./system/audio.nix
+    ./system/bluetooth.nix
+    ./system/shell.nix
+    ./system/sshd.nix
+    ./system/utility.nix
+    ./system/plymouth.nix
+    ./system/docker.nix
+    ./system/desktops/hyprland.nix
+  ];
+
+  options.modules.desktop = {
+    enable = mkEnableOption "Desktop packages and services.";
+  };
+
+  config = mkIf cfg.enable {
+    modules.hyprland.enable = true;
+    modules.bluetooth.enable = true;
+    modules.audio.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      brightnessctl             # screen and keyboard brightness control
+      gnome-keyring
+      ghostty                   # GPU-accelerated terminal emulator
+      grimblast                 # Hyprland screenshot tool (wraps grim + slurp)
+      imv                       # lightweight Wayland image viewer
+      inotify-tools             # filesystem event monitoring utilities
+      kitty                     # GPU-accelerated terminal emulator
+      libappindicator-gtk3      # system tray indicator support for GTK apps
+      libnotify                 # desktop notification library (notify-send)
+      libsecret                 # keyring access library (GNOME secrets)
+      mpv                       # general-purpose media player
+      nautilus                  # GTK file manager
+      nerd-fonts.jetbrains-mono # monospace font with icon glyphs
+      nwg-look                  # GTK theme switcher for wlroots compositors
+      obsidian                  # markdown knowledge base / note-taking
+      pavucontrol               # PulseAudio/PipeWire volume control GUI
+      pinta                     # simple image editor
+      playerctl                 # MPRIS media player controller
+      plex-desktop              # Plex media player desktop app
+      plexamp                   # Plex music player
+      signal-desktop            # encrypted messaging client
+      spotify                   # music streaming client
+      starship                  # cross-shell prompt
+      swaynotificationcenter    # notification center for wlroots compositors
+      swayosd                   # on-screen display for volume/brightness
+      vlc                       # versatile media player
+      wl-clipboard              # Wayland clipboard utilities (wl-copy/wl-paste)
+      xdg-terminal-exec         # XDG default terminal launcher spec
+    ];
+  };
+
+}

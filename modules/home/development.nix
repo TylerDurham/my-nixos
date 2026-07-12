@@ -1,17 +1,20 @@
 { lib, pkgs, osConfig, ... }:
 
 {
+  imports = [
+    ./development/go.nix
+    ./development/node.nix
+    ./development/python.nix
+  ];
+
   config = lib.mkIf (osConfig.modules.development.enable or false) {
 
     home.packages = [
-      pkgs.bun
       pkgs.gcc
+      pkgs.nixd
       pkgs.github-cli
       pkgs.gnumake
-      pkgs.go
       pkgs.just
-      pkgs.nodejs
-      pkgs.python3
       pkgs.stylua
       pkgs.tree-sitter
       pkgs.uv
