@@ -7,6 +7,10 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		my-mvc-vim = {
+			url = "github:TylerDurham/my-mvc.vim";
+			flake = false;
+		};
 	};
 
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -29,7 +33,7 @@
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users.${username} = import ./modules/home.nix;
-						extraSpecialArgs = { inherit username; };
+						extraSpecialArgs = { inherit username inputs; };
 						backupFileExtension = "backup";
 					};
 				}
