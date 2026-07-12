@@ -15,7 +15,9 @@ in
     ../system/audio.nix
     ../system/bluetooth.nix
     ../system/shell.nix
+    ../system/utility.nix
     ../system/plymouth.nix
+    ../system/docker.nix
     ./hyprland.nix
   ];
 
@@ -30,6 +32,7 @@ in
 
     environment.systemPackages = with pkgs; [
       brightnessctl          # screen and keyboard brightness control
+      gnome-keyring
       ghostty                # GPU-accelerated terminal emulator
       grimblast              # Hyprland screenshot tool (wraps grim + slurp)
       imv                    # lightweight Wayland image viewer

@@ -21,8 +21,7 @@
 				./configuration.nix
 				{ modules = cfg.modules or {}; }
 				./modules/desktop/_desktop.nix
-				./modules/optional/docker.nix
-				./modules/optional/mise.nix
+				./modules/system/development.nix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager = {

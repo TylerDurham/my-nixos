@@ -58,6 +58,7 @@ in
     # Bash's interactive shell init only sources the external rc file (no $EDITOR
     # export here — zsh is presumably the primary interactive shell).
     initExtra = ''
+      export EDITOR=nvim
       source "$HOME/.local/share/my/shell/bash.rc.sh"
     '';
 

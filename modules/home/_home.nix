@@ -3,10 +3,8 @@
 {
   imports = [
     ./git.nix
-    ./development.nix
-    # ./packages
     ./dropbox.nix
-    # ./packages/devices.nix
+    ./development.nix
     ./xdg.nix
     ./gtk.nix
     ./shell.nix
