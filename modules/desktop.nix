@@ -35,6 +35,7 @@ in
       nerd-fonts.jetbrains-mono
     ];
 
+
     environment.systemPackages = with pkgs; [
       brightnessctl             # screen and keyboard brightness control
       gnome-keyring
