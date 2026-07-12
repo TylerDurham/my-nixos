@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, username, ... }:
 
 {
   imports = [
@@ -10,8 +10,8 @@
     ./home/shell.nix
   ];
 
-  home.username = "dtd";
-  home.homeDirectory = "/home/dtd";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
   home.stateVersion = "26.05";
   home.sessionVariables = rec {
     EDITOR = "nvim";
