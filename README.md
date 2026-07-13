@@ -50,10 +50,11 @@ modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
 - **Audio** — PipeWire via `modules/system/audio.nix`
 - **Bluetooth** — Optional via `modules/system/bluetooth.nix`
 - **1Password** — System-level GUI + CLI integration
+- **Fingerprint** — `fprintd` enabled for sudo and polkit-1 authentication
 
 ## System Packages
 
-`bat` `btop` `curl` `fzf` `gvfs` `gzip` `jq` `lsd` `neovim` `ripgrep` `starship` `stow` `tmux` `tree` `unzip` `vim` `wget` `yazi` `zoxide`
+`bat` `btop` `curl` `envsubst` `fzf` `gvfs` `gzip` `jq` `lsd` `ncdu` `neovim` `ripgrep` `starship` `stow` `tmux` `tree` `unzip` `vim` `wget` `yazi` `zoxide`
 
 **Font:** JetBrains Mono Nerd Font
 
@@ -65,7 +66,7 @@ modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
 
 **Utility:** `brightnessctl` `grimblast` `libsecret` `neovim` `pavucontrol` `starship` `wl-clipboard`
 
-**Development** *(host-level toggle via `modules.development.enable`)*: `black` `bun` `gcc` `github-cli` `gnumake` `go` `gopls` `gotools` `isort` `just` `nixd` `nodejs` `prettier` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
+**Development** *(host-level toggle via `modules.development.enable`)*: `black` `bun` `gcc` `github-cli` `gnumake` `go` `gopls` `gotools` `hugo` `isort` `just` `nixd` `nodejs` `prettier` `python3` `stylua` `tree-sitter` `uv` + `mise` for runtime version management
 
 ## Usage
 
@@ -83,6 +84,28 @@ cryptsetup luksFormat /dev/nvme0n1p3
 cryptsetup luksOpen /dev/nvme0n1p3 cryptroot
 mkfs.ext4 /dev/mapper/cryptroot
 
+```
+
+### Fingerprint Enrollment
+
+List enrolled fingerprints for the current user:
+
+```shell
+fprintd-list $USER
+```
+
+Enroll a finger (default: `right-index-finger`):
+
+```shell
+fprintd-enroll
+```
+
+To enroll a specific finger, pass `-f <finger>`. Valid finger names: `left-thumb`, `left-index-finger`, `left-middle-finger`, `left-ring-finger`, `left-little-finger`, `right-thumb`, `right-index-finger`, `right-middle-finger`, `right-ring-finger`, `right-little-finger`.
+
+Verify an enrolled finger:
+
+```shell
+fprintd-verify
 ```
 
 ### Rebuild
