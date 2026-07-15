@@ -15,6 +15,7 @@
       pkgs.github-cli
       pkgs.gnumake
       pkgs.just
+      pkgs.hugo
       pkgs.stylua
       pkgs.tree-sitter
       pkgs.uv
@@ -24,13 +25,6 @@
       enable = true;
     };
 
-    programs.zsh.initContent = ''
-      eval "$(mise activate zsh)"
-    '';
-
-    programs.bash.initExtra = ''
-      eval "$(mise activate bash)"
-    '';
   };
 }
 
