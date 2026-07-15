@@ -26,6 +26,7 @@
 | [my-shell](https://github.com/TylerDurham/my-shell)       | My `shell` dotfiles.    |
 | [my-hyprland](https://github.com/TylerDurham/my-hyprland) | My `Hyprland` dotfiles. |
 | [my-neovim](https://github.com/TylerDurham/my-neovim)     | My `NeoVim` dotfiles.   |
+| [my-mvc.vim](https://github.com/TylerDurham/my-mvc.vim)   | My minimal `vim` config. |
 
 
 ## Structure
@@ -39,7 +40,6 @@ modules/desktop.nix    # Desktop environment module (Hyprland, audio, bluetooth)
 modules/home.nix       # Home Manager entry point
 modules/home/          # Home Manager modules (shell, git, gtk, development)
 modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
-system/                # Core NixOS config (packages, programs, users)
 ```
 
 ## Features
