@@ -32,7 +32,6 @@ in
     # Declarative shell aliases -> written into zsh's config by home-manager.
     # Options reference: https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zsh.shellAliases
     shellAliases = {
-      btw = "echo 'I use NixOS, btw...'";
 
       # Garbage-collect old Nix store generations/paths to reclaim disk space.
       # Docs: https://nixos.org/manual/nix/stable/package-management/garbage-collection.html

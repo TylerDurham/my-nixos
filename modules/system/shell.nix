@@ -7,6 +7,7 @@
     fzf                       # command-line fuzzy finder
     gvfs                      # virtual filesystem for GNOME (trash, mtp, network mounts, etc.)
     lsd                       # modern ls replacement with icons and colors
+    ncdu                      # ncdu (NCurses Disk Usage) is a command-line disk usage analyzer for Linux/Unix
     neovim                    # extensible terminal text editor
     ripgrep                   # fast recursive grep alternative (rg)
     starship                  # fast, customizable shell prompt
