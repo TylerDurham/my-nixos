@@ -56,7 +56,7 @@ modules/system/        # NixOS system modules (shell, docker, plymouth, sshd)
 
 `bat` `btop` `curl` `envsubst` `fzf` `gvfs` `gzip` `jq` `lsd` `ncdu` `neovim` `ripgrep` `starship` `stow` `tmux` `tree` `unzip` `vim` `wget` `yazi` `zoxide`
 
-**Font:** JetBrains Mono Nerd Font
+**Fonts:** JetBrains Mono Nerd Font · BioRhyme · SF Pro Display · Special Elite
 
 ## Home Packages
 
