@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "my-mvc-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783887742,
+        "narHash": "sha256-62QKNKkLDWCjrANXr3AQpYCHAj8Q1NtOJKOa+wr9Y9A=",
+        "owner": "TylerDurham",
+        "repo": "my-mvc.vim",
+        "rev": "e19c1a2025cec8a79d08ceab84309b5832137146",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TylerDurham",
+        "repo": "my-mvc.vim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1782723713,
@@ -37,6 +53,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "my-mvc-vim": "my-mvc-vim",
         "nixpkgs": "nixpkgs"
       }
     }

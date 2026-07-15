@@ -5,6 +5,7 @@
     ./home/git.nix
     ./home/dropbox.nix
     ./home/development.nix
+    ./home/vim.nix
     ./home/xdg.nix
     ./home/gtk.nix
     ./home/shell.nix
