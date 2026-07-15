@@ -14,6 +14,7 @@ in
   imports = [
     ./system/audio.nix
     ./system/bluetooth.nix
+    ./system/fingerprint.nix
     ./system/shell.nix
     ./system/sshd.nix
     ./system/utility.nix
@@ -34,6 +35,7 @@ in
     modules.hyprland.enable = true;
     modules.bluetooth.enable = true;
     modules.audio.enable = true;
+    modules.fingerprint.enable = true;
 
     fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
