@@ -18,6 +18,10 @@
 
   };
 
+  home.packages = with pkgs; [
+    lazygit
+  ];
+
   # optional niceties
   programs.delta = {
     enable = true;        # nicer diffs
