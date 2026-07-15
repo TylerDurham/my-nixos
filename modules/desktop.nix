@@ -39,6 +39,8 @@ in
 
     fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
+      (callPackage ./system/fonts/sf-pro.nix {})
+      (callPackage ./system/fonts/bio-rhyme.nix {})
     ];
 
 
