@@ -41,6 +41,7 @@ in
       nerd-fonts.jetbrains-mono
       (callPackage ./system/fonts/sf-pro.nix {})
       (callPackage ./system/fonts/bio-rhyme.nix {})
+      (callPackage ./system/fonts/special-elite.nix {})
     ];
 
 
