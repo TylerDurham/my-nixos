@@ -49,6 +49,7 @@ in
       gnome-keyring
       ghostty                   # GPU-accelerated terminal emulator
       grimblast                 # Hyprland screenshot tool (wraps grim + slurp)
+      imagemagick
       imv                       # lightweight Wayland image viewer
       inotify-tools             # filesystem event monitoring utilities
       kitty                     # GPU-accelerated terminal emulator
