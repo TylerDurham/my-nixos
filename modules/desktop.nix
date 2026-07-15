@@ -27,6 +27,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    services.fprintd.enable = true;
+    security.pam.services.sudo.fprintAuth = true;
+    security.pam.services.polkit-1.fprintAuth = true;
+
     modules.hyprland.enable = true;
     modules.bluetooth.enable = true;
     modules.audio.enable = true;
