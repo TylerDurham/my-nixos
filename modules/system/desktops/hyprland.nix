@@ -20,6 +20,12 @@ in
       xwayland.enable = true;
     };
 
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-hyprland xdg-desktop-portal-gtk ];
+      config.common.default = "*";
+    };
+
     environment.systemPackages = with pkgs; [
       hypridle               # idle daemon for Hyprland (triggers lock/sleep)
       hyprsunset             # blue light filter for Hyprland
