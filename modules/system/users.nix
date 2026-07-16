@@ -4,7 +4,7 @@
   users.users.${username} = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "kvm" ]; # kvm: /dev/kvm access for Claude Cowork's microVM
     packages = with pkgs; [
       claude-code
       tree
