@@ -21,6 +21,10 @@ in
   programs.zsh = {
     enable = true;
 
+    profileExtra = ''
+      source ~/.local/share/my/shell/zsh.profile.sh
+    '';
+
     # Shell code injected into interactive (non-login) shell startup, i.e. ~/.zshrc.
     # Equivalent to home-manager's `initContent` (24.11+) — sets $EDITOR and sources
     # an external, non-Nix-managed rc file for things you iterate on outside the flake.
