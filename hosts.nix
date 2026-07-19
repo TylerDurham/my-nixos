@@ -14,5 +14,6 @@
     modules.desktop.enable = true;
     modules.docker.enable = true;
     modules.development.enable = true;
+    modules.gaming.enable = true;
   };
 }

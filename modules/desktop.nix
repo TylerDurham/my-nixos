@@ -20,6 +20,7 @@ in
     ./system/utility.nix
     ./system/plymouth.nix
     ./system/docker.nix
+    ./system/gaming.nix
     ./system/desktops/hyprland.nix
   ];
 
